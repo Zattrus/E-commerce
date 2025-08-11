@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-commerce Project
 
-## Getting Started
+## Introdução
 
-First, run the development server:
+Este é um projeto de E-commerce construído com Next.js. O objetivo deste projeto é fornecer uma plataforma de compras online com uma experiência de usuário otimizada e recursos avançados.
+
+## Instalação
+
+Para instalar as dependências do projeto, execute o seguinte comando:
+
+```bash
+npm install
+```
+## Configuração .env
+
+Antes de executar o projeto, você pode precisar configurar algumas variáveis de ambiente. Crie um arquivo `.env.local` na raiz do projeto e adicione suas variáveis de ambiente personalizadas.
+
+Seu arquivo `.env.local` deve se parecer com isto:
+
+```
+DATABASE_URL=your_database_url
+BETTER_AUTH_SECRET=your_better_auth_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+```
+## Conexão com o Banco de Dados
+
+Para conectar-se com o banco de dados, você precisa rodar alguns comandos. Lembre-se de que você deve ter o [Drizzle ORM](https://orm.drizzle.team/) instalado e configurado corretamente ou pode usar outro ORM de sua escolha.
+
+1 - Execute o comando para subir o banco de dados.
+```bash
+npx drizzle-kit push
+```
+2 - Se você estiver usando o Drizzle ORM, certifique-se de que o arquivo `drizzle.config.ts` esteja configurado corretamente para apontar para o seu banco de dados.
+
+3 - Bonus - Caso Queira acompanhar mais de perto a situação do banco de dados, o Drizzle oferece um ambiente de monitoramento em tempo real. Usando esse comando
+```bash
+npx drizzle-kit studio
+```
+
+## Uso
+
+Para iniciar o servidor de desenvolvimento, execute:
 
 ```bash
 npm run dev
-# or
+```
+ou 
+
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Agora você pode acessar o aplicativo em [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Licença
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
