@@ -13,9 +13,9 @@ npm install
 ```
 ## Configuração .env
 
-Antes de executar o projeto, você pode precisar configurar algumas variáveis de ambiente. Crie um arquivo `.env.local` na raiz do projeto e adicione suas variáveis de ambiente personalizadas.
+Antes de executar o projeto, você pode precisar configurar algumas variáveis de ambiente. Crie um arquivo `.env` na raiz do projeto e adicione suas variáveis de ambiente personalizadas.
 
-Seu arquivo `.env.local` deve se parecer com isto:
+Seu arquivo `.env` deve se parecer com isto:
 
 ```
 DATABASE_URL=your_database_url
